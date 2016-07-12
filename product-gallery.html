@@ -1,0 +1,9 @@
+<!-- Image Gallery  -->
+<div class="gallery" ng-show='{{product.images.length}}'>
+<img class="img img-circle img-thumbnail center-block" ng-src="{{product.images[gallery.current]}}"  style="width:100px;height:100px;"/>
+<ul class="clearfix">
+  <li class="small-image pull-left thumbnail" ng-repeat="image in product.images"> 
+    <img ng-src="{{image}}" style="width:30px;height:30px;" ng-click="gallery.setCurrent($index)" /> 
+  </li>
+</ul>
+</div>
